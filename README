@@ -1,0 +1,47 @@
+shir_brosh
+316124767
+
+=============================
+=      File description     =
+=============================
+In this exercise I created 4 packages:
+1.fileprocessing - the mandatory packages containing the main class- DirectoryProcessor, a ReadCommandFile
+    and Section class.
+    DirectoryProcessor- the main class operating this exercise goal
+    ReadCommandFile- reads the given command file and helps divide it to sections.
+    Section- this will contains all the information of a section.
+2.errors- the package containing the two types of errors:
+    Type1Error- finds error of type 1 in the command file.
+    Type2Error- finds error of type 2 in the command file.
+3.filters- the package containing all the filter class,its interface and its factory:
+    Filter- The filters interface.
+    Double filter - a parent class for the filters with double arguments.
+    String Filter - a parent class for the filters with String arguments.
+    FilterFactory -This class acts as the driver to create all Filter objects.
+    and all the filters:
+    All.java, GreaterThan.java, SmallerThan.java, Between.java, Contains.java, FileFilter.java,
+    Executable.java, Hidden.java, Prefix.java, Suffix.java, Writable.java
+4.orders -  the package containing all the orders class, its interface and its factory:
+    Order - The orders interface.
+    MainOrder - A parent class for the orders objects
+    OrderFactory - This class acts as the driver to create all Order objects.
+    all the orders:
+    Abs.java, Type.java, Size.java
+=============================
+=          Design           =
+=============================
+In my project i divided every category into packages which makes it easier to understand, organized,
+modular and easier to change if necessary.
+
+Handling Errors - in my design all error handling are under one package, a class for type 1 error and
+anther one for the second type error, these classes search for the errors and throws matching exceptions,
+and the main class DirectoryProcessor catches them. I chose to design the errors that way because although
+its a bit longer than catching error in the relevant places where they can accrue, its much more modular
+and easy to change if necessary, all gathered under one package
+
+=============================
+=  Implementation details   =
+=============================
+I used Quick Sort to sort the files, because its an efficient sorting technique and saved all the sorted
+files in an ArrayList<File> because it is a comfortable data structure to use.
+
